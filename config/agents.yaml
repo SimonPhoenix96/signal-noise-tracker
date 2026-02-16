@@ -1,0 +1,139 @@
+# Cronjob Money-MVP - Agent Configuration
+# Define agents that will be triggered by RSS feeds.
+
+agents:
+  # Example 1: Arbitrage Checker
+  - id: arbitrage_checker
+    name: Arbitrage Checker
+    type: arbitrage
+    description: Checks for underpriced items across multiple feeds
+    feeds:
+      - id: deal_hunter_daily
+      - id: frugally_daily
+      - id: tech_deals_gaming
+      - id: price_tracker_electronics
+    enabled: true
+    priority: 1
+
+    # Agent-specific settings
+    config:
+      # Minimum profit threshold (e.g., 20%)
+      min_profit_percent: 20
+
+      # Required tags
+      required_tags:
+        - "deal"
+        - "underpriced"
+        - "price drop"
+
+      # Blacklisted keywords
+      exclude_keywords:
+        - "used"
+        - "scratch"
+        - "damaged"
+        - "open box"
+
+      # Alert methods
+      alert_methods:
+        - discord
+        - email
+
+      # Alert frequency limits
+      rate_limit_seconds: 3600
+
+  # Example 2: Price Drop Detector
+  - id: price_drop_detector
+    name: Price Drop Detector
+    type: price_tracker
+    description: Alerts when items on watchlist drop in price
+    feeds:
+      - id: price_tracker_electronics
+      - id: price_tracker_books
+    enabled: true
+    priority: 2
+
+    config:
+      # Price drop percentage threshold
+      price_drop_threshold_percent: 15
+
+      # Track items for how many days
+      track_days: 30
+
+      # Alert when price drops
+      alert_on_drop: true
+
+      # Alert methods
+      alert_methods:
+        - discord
+
+  # Example 3: Trend Analyzer
+  - id: trend_analyzer
+    name: Trend Analyzer
+    type: trend_analyzer
+    description: Analyzes trends across multiple feeds and generates reports
+    feeds:
+      - id: ecommerce_trends
+      - id: local_market_news
+    enabled: true
+    priority: 3
+
+    config:
+      # Analysis interval (in minutes)
+      analysis_interval_minutes: 60
+
+      # Trending keywords to track
+      trending_keywords:
+        - "release"
+        - "launch"
+        - "new"
+        - "update"
+
+      # Output formats
+      output_formats:
+        - report
+        - summary
+
+      # Send report to Discord
+      discord_report: true
+
+  # Example 4: Generic RSS Aggregator
+  - id: generic_aggregator
+    name: Generic RSS Aggregator
+    type: aggregator
+    description: Collects and aggregates all enabled feeds
+    feeds:
+      - id: deal_hunter_daily
+      - id: frugally_daily
+      - id: tech_deals_gaming
+      - id: price_tracker_electronics
+      - id: local_market_news
+    enabled: true
+    priority: 0
+
+    config:
+      # Deduplicate across all feeds
+      global_deduplication: true
+
+      # Output file
+      output_file: "data/aggregated_items.json"
+
+      # Include all tags
+      include_all_tags: true
+
+# Agent execution settings
+execution:
+  # Maximum concurrent agents
+  max_concurrent_agents: 3
+
+  # Timeout per agent (in seconds)
+  agent_timeout_seconds: 300
+
+  # Retry settings
+  retry:
+    max_attempts: 3
+    retry_delay_seconds: 60
+
+  # Queue management
+  queue:
+    max_queue_size: 1000
+    worker_threads: 2

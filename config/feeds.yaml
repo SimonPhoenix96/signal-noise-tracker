@@ -1,0 +1,76 @@
+# Cronjob Money-MVP - RSS Feed Configuration
+# Add your RSS feeds here. Each feed has priority and filtering rules.
+
+feeds:
+  # Example: Deal aggregator RSS feeds
+  - id: deal_hunter_daily
+    name: Deal Hunter Daily
+    url: https://example.com/feed
+    priority: 1
+    tags: ["deals", "discount", "sale"]
+    enabled: true
+
+  - id: frugally_daily
+    name: Frugally Good Daily
+    url: https://frugallygood.com/feed
+    priority: 2
+    tags: ["coupons", "deals", "discounts"]
+    enabled: true
+
+  - id: tech_deals_gaming
+    name: Tech Deals (Gaming)
+    url: https://techdeals.gaming/feed
+    priority: 3
+    tags: ["gaming", "hardware", "software"]
+    enabled: true
+
+  # Example: Price tracking feeds
+  - id: price_tracker_electronics
+    name: Price Tracker: Electronics
+    url: https://price-tracker.com/electronics/feed
+    priority: 2
+    tags: ["electronics", "gadgets", "price drops"]
+    enabled: true
+
+  - id: price_tracker_books
+    name: Price Tracker: Books
+    url: https://price-tracker.com/books/feed
+    priority: 3
+    tags: ["books", "literature", "price drops"]
+    enabled: true
+
+  # Example: News feeds for arbitrage opportunities
+  - id: local_market_news
+    name: Local Market News
+    url: https://local-market.com/news/feed
+    priority: 1
+    tags: ["local", "market", "news"]
+    enabled: true
+
+  - id: ecommerce_trends
+    name: E-commerce Trends
+    url: https://trends.ecommerce/feed
+    priority: 2
+    tags: ["trends", "market", "analysis"]
+    enabled: true
+
+# Feed processing rules
+processing:
+  # Maximum age of items to process (in days)
+  max_age_days: 7
+
+  # Include patterns (regex)
+  include_patterns: []
+
+  # Exclude patterns (regex)
+  exclude_patterns:
+    - "spam"
+    - "scam"
+    - "advertisement"
+    - "promo"
+
+  # Deduplication settings
+  deduplication:
+    enabled: true
+    storage_file: "data/feed_state.json"
+    max_items_per_feed: 1000
