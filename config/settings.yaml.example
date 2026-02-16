@@ -1,0 +1,78 @@
+# Cronjob Money-MVP - Global Settings
+
+# Environment
+environment: development  # development, production
+log_level: INFO  # DEBUG, INFO, WARNING, ERROR
+
+# Data storage
+data_dir: ./data
+logs_dir: ./logs
+cache_dir: ./data/cache
+
+# API keys and secrets (load from environment)
+api_keys:
+  # Example: Discord webhook URL
+  discord_webhook: "${DISCORD_WEBHOOK}"
+
+  # Example: Email service
+  email_api_key: "${EMAIL_API_KEY}"
+
+# System limits
+limits:
+  # Maximum concurrent agents
+  max_concurrent_agents: 5
+
+  # Memory limit per agent (MB)
+  max_memory_per_agent: 256
+
+  # CPU limit per agent (%)
+  max_cpu_per_agent: 50
+
+  # Disk space limit for logs (GB)
+  max_log_disk_gb: 10
+
+# Alert thresholds
+alerts:
+  # Agent failure
+  agent_failure: true
+
+  # High resource usage
+  high_memory_usage_threshold: 80
+  high_cpu_usage_threshold: 70
+
+  # Low success rate
+  low_success_rate_threshold: 0.5
+
+# Backup settings
+backup:
+  enabled: true
+  interval_hours: 24
+  retention_days: 7
+
+# Data retention
+retention:
+  # Days to keep logs
+  logs_days: 30
+
+  # Days to keep RSS item history
+  rss_history_days: 30
+
+  # Days to keep cache
+  cache_days: 7
+
+# Cron settings
+cron:
+  # Main cron schedule
+  schedule: "0 */4 * * *"  # Every 4 hours
+
+  # Timezone
+  timezone: "Europe/Berlin"
+
+  # Grace period before terminating jobs
+  grace_period_seconds: 30
+
+# API settings (for web UI if added later)
+api:
+  enabled: false
+  host: "0.0.0.0"
+  port: 8080

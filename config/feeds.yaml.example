@@ -1,0 +1,55 @@
+# Cronjob Money-MVP - RSS Feed Configuration
+# Copy this file to feeds.yaml and customize
+
+feeds:
+  # Example: Deal hunting feeds
+  - id: kleinanzeigen_deals
+    name: Kleinanzeigen Deals
+    url: https://www.kleinanzeigen.de/siegel-anzeigen/rss?seid=YOUR_SESSID
+    priority: 1
+    tags: ["deals", "arbitrage", "germany"]
+    enabled: true
+    headers:
+      User-Agent: Mozilla/5.0
+
+  - id: ebay_deals
+    name: eBay Deals
+    url: https://www.ebay.de/sch/i.html?_nkw=deals&_sacat=0&rss=1
+    priority: 2
+    tags: ["deals", "arbitrage"]
+    enabled: true
+
+  # Example: Job hunting feeds
+  - id: upwork_projects
+    name: Upwork Projects
+    url: https://www.upwork.com/ab/feed/jobs/rss?securityToken=YOUR_TOKEN
+    priority: 1
+    tags: ["jobs", "hiring"]
+    enabled: false
+
+  # Example: Tech news (for research projects)
+  - id: techcrunch
+    name: TechCrunch
+    url: https://techcrunch.com/feed/
+    priority: 3
+    tags: ["tech", "startups", "news"]
+    enabled: true
+
+# Feed filtering rules (apply before processing)
+filter_rules:
+  # Remove items older than X days
+  max_age_days: 30
+
+  # Required tags (item must have ALL of these)
+  required_tags: []
+
+  # Exclude tags
+  exclude_tags: ["spam", "scam", "advertisement"]
+
+# Rate limiting
+rate_limiting:
+  # Max items per feed per run
+  max_items_per_feed: 100
+
+  # Minimum time between runs (seconds)
+  min_run_interval: 14400  # 4 hours

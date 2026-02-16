@@ -1,0 +1,102 @@
+# Cronjob Money-MVP - Agent Trigger Configuration
+# Copy this file to agents.yaml and customize
+
+agents:
+  # Example: Arbitrage detection agent
+  - id: arbitrage_checker
+    name: Arbitrage Checker
+    type: arbitrage
+    enabled: true
+
+    # Which feeds to monitor
+    feeds:
+      - kleinanzeigen_deals
+      - ebay_deals
+
+    # Trigger configuration
+    trigger:
+      type: cron
+      schedule: "0 */4 * * *"  # Every 4 hours
+
+      # Optional: Only trigger if X items found
+      min_items: 1
+
+      # Optional: Filter by tags
+      tags:
+        - arbitrage
+        - deal
+
+    # Agent-specific configuration
+    config:
+      price_threshold: 0.7  # 70% of average price
+      max_price: 100.0       # Maximum price to consider
+      local_market: "germany"
+
+    # Output configuration
+    output:
+      format: "alert"  # alert, email, discord, file
+      destinations:
+        - type: alert
+          priority: high
+
+  # Example: Job hunting agent
+  - id: job_tracker
+    name: Job Tracker
+    type: job_hunter
+    enabled: true
+
+    feeds:
+      - upwork_projects
+
+    trigger:
+      type: cron
+      schedule: "0 */4 * * *"
+
+      # Only trigger if new jobs match criteria
+      min_items: 3
+      filters:
+        skills: ["rust", "docker", "kubernetes"]
+
+    config:
+      job_types: ["contract", "full-time"]
+      max_competitors: 10
+
+    output:
+      format: "summary"
+      destinations:
+        - type: email
+          recipients: ["jd@example.com"]
+
+  # Example: Product research agent
+  - id: product_radar
+    name: Product Radar
+    type: product_research
+    enabled: false
+
+    feeds:
+      - techcrunch
+
+    trigger:
+      type: cron
+      schedule: "0 9,15 * * *"  # 9 AM and 3 PM
+
+    config:
+      topics: ["dropshipping", "e-commerce"]
+      output_count: 10
+
+    output:
+      format: "summary"
+      destinations:
+        - type: alert
+
+# Global agent settings
+global:
+  # Execution timeout per agent (seconds)
+  timeout: 300
+
+  # Retry failed agents
+  retry_attempts: 2
+  retry_delay: 60
+
+  # Agent health checks
+  health_check_interval: 3600
