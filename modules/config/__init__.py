@@ -5,7 +5,7 @@ Handles loading, validation, and management of configuration files.
 """
 
 import yaml
-from typing import Dict, Any
+from typing import Dict, Any, Optional, List
 from pathlib import Path
 
 from ..logger import get_logger
@@ -17,7 +17,7 @@ class ConfigManager:
     """Manages configuration files"""
 
     def __init__(self, config_dir: str = "./config"):
-        self.config_dir = Path(config_dir)
+        self.config_dir: Path = Path(config_dir)
         self.configs: Dict[str, Any] = {}
         logger.info(f"ConfigManager initialized (config_dir={self.config_dir})")
 
@@ -32,7 +32,7 @@ class ConfigManager:
         Returns:
             Configuration dictionary
         """
-        config_path = self.config_dir / f"{filename}.yaml"
+        config_path: Path = self.config_dir / f"{filename}.yaml"
 
         if not config_path.exists():
             if required:
@@ -44,7 +44,7 @@ class ConfigManager:
 
         try:
             with open(config_path, "r") as f:
-                config = yaml.safe_load(f)
+                config: Dict[str, Any] = yaml.safe_load(f)
 
             self.configs[filename] = config
             logger.info(f"Loaded config: {filename}")
@@ -61,9 +61,9 @@ class ConfigManager:
         """Get a loaded configuration"""
         return self.configs.get(filename, {})
 
-    def reload_all(self):
+    def reload_all(self) -> None:
         """Reload all configuration files"""
-        config_files = ["feeds", "agents", "settings"]
+        config_files: List[str] = ["feeds", "agents", "settings"]
 
         for filename in config_files:
             try:
@@ -85,8 +85,8 @@ class ConfigManager:
             True if valid
         """
         # Simple validation - check required keys exist
-        required = schema.get("required", [])
-        optional = schema.get("optional", [])
+        required: List[str] = schema.get("required", [])
+        optional: List[str] = schema.get("optional", [])
 
         for key in required:
             if key not in config:

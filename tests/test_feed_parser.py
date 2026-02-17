@@ -42,7 +42,7 @@ class TestFeedParser:
         cleaned = parser._clean_text(html_text)
         assert "<p>" not in cleaned
         assert "<b>" not in cleaned
-        assert "&amp;" in cleaned  # Should decode
+        assert "&" in cleaned  # Should decode &amp; to &
 
         # Test truncation
         long_text = "a" * 1000
@@ -180,8 +180,12 @@ class TestItemFilter:
         ]
 
         filtered = filter_obj.filter(items)
-        assert len(filtered) == 2
-        assert all("deal" in item.title.lower() or "sale" in item.title.lower() for item in filtered)
+        # Only item 1 should pass: matches "deal" (include), doesn't match "spam"/"scam" (exclude)
+        # Item 2 fails: matches "spam" (exclude)
+        # Item 3 fails: doesn't match "deal" or "sale" (include)
+        assert len(filtered) == 1
+        assert filtered[0].id == "1"
+        assert "deal" in filtered[0].title.lower() or "sale" in filtered[0].title.lower()
 
     def test_no_filters(self):
         """Test when no filters are configured"""

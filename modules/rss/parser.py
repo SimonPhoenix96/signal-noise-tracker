@@ -6,7 +6,7 @@ Parses RSS/Atom feeds and extracts items with metadata.
 
 import feedparser
 from datetime import datetime
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, asdict
 
 from ..logger import get_logger
@@ -60,7 +60,7 @@ class FeedParser:
             if feed.bozo:
                 logger.warning(f"Feed has parse warnings: {feed.bozo_exception}")
 
-            items = []
+            items: List[FeedItem] = []
             for entry in feed.entries:
                 item = self._parse_entry(entry, feed)
                 if item:
@@ -73,15 +73,15 @@ class FeedParser:
             logger.error(f"Failed to parse feed {feed_url}: {e}")
             raise
 
-    def _parse_entry(self, entry, feed) -> FeedItem:
+    def _parse_entry(self, entry, feed) -> Optional[FeedItem]:
         """Parse a single feed entry"""
         try:
             # Extract published date
-            published = self._parse_date(entry.get("published_parsed"))
-            updated = self._parse_date(entry.get("updated_parsed", published))
+            published: datetime = self._parse_date(entry.get("published_parsed"))
+            updated: datetime = self._parse_date(entry.get("updated_parsed", published))
 
             # Extract tags
-            tags = self._extract_tags(entry, feed)
+            tags: List[str] = self._extract_tags(entry, feed)
 
             # Create feed item
             item = FeedItem(
@@ -112,7 +112,7 @@ class FeedParser:
 
     def _extract_tags(self, entry, feed) -> List[str]:
         """Extract tags from entry and feed"""
-        tags = []
+        tags: List[str] = []
 
         # Extract tags from categories
         if hasattr(entry, "tags"):

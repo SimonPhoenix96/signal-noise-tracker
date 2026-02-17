@@ -6,8 +6,9 @@ Main cron scheduler that coordinates RSS ingestion and agent triggering.
 
 import sys
 import os
+import time
 from datetime import datetime
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 from pathlib import Path
 
 # Add project root to path
@@ -25,8 +26,8 @@ class CronRunner:
     """Main cron scheduler"""
 
     def __init__(self, env: str = "development", dev_mode: bool = False):
-        self.env = env
-        self.dev_mode = dev_mode
+        self.env: str = env
+        self.dev_mode: bool = dev_mode
 
         # Setup logging
         log_level = "DEBUG" if dev_mode else "INFO"
@@ -35,10 +36,10 @@ class CronRunner:
         logger.info("CronRunner initialized", env=env, dev_mode=dev_mode)
 
         # Load configurations
-        self.config_mgr = ConfigManager()
-        self.triggers = TriggerManager({}, data_dir="./data")
+        self.config_mgr: ConfigManager = ConfigManager()
+        self.triggers: TriggerManager = TriggerManager({}, data_dir="./data")
 
-    def run_once(self):
+    def run_once(self) -> None:
         """Run a single cron cycle"""
         logger.info("=" * 50, action="cron_cycle_start")
         start_time = datetime.utcnow()
@@ -46,8 +47,8 @@ class CronRunner:
         try:
             # Step 1: Load configurations
             logger.info("Loading configurations...")
-            feeds_config = self.config_mgr.load_config("feeds", required=False) or {"feeds": []}
-            agents_config = self.config_mgr.load_config("agents", required=False) or {"agents": []}
+            feeds_config: Dict[str, Any] = self.config_mgr.load_config("feeds", required=False) or {"feeds": []}
+            agents_config: Dict[str, Any] = self.config_mgr.load_config("agents", required=False) or {"agents": []}
 
             # Step 2: Run triggers
             logger.info("Running triggers...")
@@ -61,13 +62,13 @@ class CronRunner:
                     logger.debug(f"Skipping agent: {agent.get('name')}")
 
             # Step 3: Get queue status
-            status = self.triggers.get_queue_status()
+            status: Dict[str, Any] = self.triggers.get_queue_status()
             logger.info(f"Queue status: {status['total_tasks']} tasks queued")
 
             # Step 4: Process queue
             logger.info("Processing queue...")
             while True:
-                task = self.triggers.get_next_task()
+                task: Optional[Dict[str, Any]] = self.triggers.get_next_task()
                 if not task:
                     break
 
@@ -77,10 +78,10 @@ class CronRunner:
             logger.error(f"Cron cycle failed: {e}", exc_info=True)
 
         end_time = datetime.utcnow()
-        duration = (end_time - start_time).total_seconds()
+        duration: float = (end_time - start_time).total_seconds()
         logger.info("cron_cycle_end", duration_seconds=round(duration, 2))
 
-    def run_loop(self, interval_seconds: int = 60):
+    def run_loop(self, interval_seconds: int = 60) -> None:
         """Run cron in a loop (for development)"""
         logger.info("Starting cron loop", interval_seconds=interval_seconds)
 
@@ -89,12 +90,12 @@ class CronRunner:
             logger.info("Sleeping...", interval_seconds=interval_seconds)
             time.sleep(interval_seconds)
 
-    def _process_task(self, task: Dict[str, Any]):
+    def _process_task(self, task: Dict[str, Any]) -> None:
         """Process a single task from the queue"""
-        agent_id = task.get("agent_id")
-        agent_name = task.get("agent_name")
-        items = task.get("items", [])
-        config = task.get("config", {})
+        agent_id: Optional[str] = task.get("agent_id")
+        agent_name: Optional[str] = task.get("agent_name")
+        items: List[Dict[str, Any]] = task.get("items", [])
+        config: Dict[str, Any] = task.get("config", {})
 
         logger.info(
             "Processing task",

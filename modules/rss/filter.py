@@ -18,7 +18,7 @@ class ItemFilter:
     """Filters RSS feed items based on rules"""
 
     def __init__(self, config: Dict[str, Any]):
-        self.config = config
+        self.config: Dict[str, Any] = config
         logger.info("ItemFilter initialized")
 
     def filter(self, items: List[FeedItem]) -> List[FeedItem]:
@@ -31,7 +31,7 @@ class ItemFilter:
         Returns:
             Filtered list of items
         """
-        filtered = items.copy()
+        filtered: List[FeedItem] = items.copy()
 
         # Filter by age
         filtered = self._filter_by_age(filtered)
@@ -55,7 +55,7 @@ class ItemFilter:
             return items
 
         cutoff = datetime.utcnow() - timedelta(days=max_age_days)
-        filtered = [item for item in items if item.published >= cutoff]
+        filtered: List[FeedItem] = [item for item in items if item.published >= cutoff]
 
         if len(filtered) != len(items):
             logger.debug(f"Filtered {len(items) - len(filtered)} old items (> {max_age_days} days)")
@@ -64,11 +64,11 @@ class ItemFilter:
 
     def _filter_by_required_tags(self, items: List[FeedItem]) -> List[FeedItem]:
         """Only include items that have all required tags"""
-        required_tags = self.config.get("required_tags", [])
+        required_tags: List[str] = self.config.get("required_tags", [])
         if not required_tags:
             return items
 
-        filtered = []
+        filtered: List[FeedItem] = []
         for item in items:
             if all(tag in item.tags for tag in required_tags):
                 filtered.append(item)
@@ -80,11 +80,11 @@ class ItemFilter:
 
     def _filter_by_excluded_tags(self, items: List[FeedItem]) -> List[FeedItem]:
         """Exclude items with excluded tags"""
-        exclude_tags = self.config.get("exclude_tags", [])
+        exclude_tags: List[str] = self.config.get("exclude_tags", [])
         if not exclude_tags:
             return items
 
-        filtered = [
+        filtered: List[FeedItem] = [
             item for item in items
             if not any(tag in exclude_tags for tag in item.tags)
         ]
@@ -96,10 +96,10 @@ class ItemFilter:
 
     def _filter_by_patterns(self, items: List[FeedItem]) -> List[FeedItem]:
         """Filter by regex patterns in title/description"""
-        include_patterns = self.config.get("include_patterns", [])
-        exclude_patterns = self.config.get("exclude_patterns", [])
+        include_patterns: List[str] = self.config.get("include_patterns", [])
+        exclude_patterns: List[str] = self.config.get("exclude_patterns", [])
 
-        filtered = items.copy()
+        filtered: List[FeedItem] = items.copy()
 
         if include_patterns:
             pattern_list = [re.compile(p, re.IGNORECASE) for p in include_patterns]

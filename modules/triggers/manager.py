@@ -6,7 +6,7 @@ Manages agent execution queue and triggers based on configuration.
 
 import json
 import os
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 from datetime import datetime
 from pathlib import Path
 from queue import Queue, Empty
@@ -22,11 +22,11 @@ class TriggerManager:
     """Manages agent triggers and execution"""
 
     def __init__(self, config: Dict[str, Any], data_dir: str = "./data"):
-        self.config = config
-        self.data_dir = Path(data_dir)
-        self.queue_file = self.data_dir / "trigger_queue.json"
+        self.config: Dict[str, Any] = config
+        self.data_dir: Path = Path(data_dir)
+        self.queue_file: Path = self.data_dir / "trigger_queue.json"
         self.queue: List[Dict[str, Any]] = []
-        self.lock = Lock()
+        self.lock: Lock = Lock()
 
         # Load existing queue
         self._load_queue()
@@ -35,12 +35,12 @@ class TriggerManager:
 
     def load_agents(self, config: Dict[str, List[Dict]]) -> List[Dict]:
         """Load agent configurations"""
-        agents = config.get("agents", [])
+        agents: List[Dict] = config.get("agents", [])
         logger.info(f"Loaded {len(agents)} agent configurations")
 
         # Add queue ID to each agent
         for agent in agents:
-            agent_id = agent.get("id")
+            agent_id: Optional[str] = agent.get("id")
             if agent_id:
                 agent["queue_id"] = agent_id
 
@@ -61,18 +61,18 @@ class TriggerManager:
             return False
 
         # Check if feeds have items
-        feeds = agent_config.get("feeds", [])
+        feeds: List[str] = agent_config.get("feeds", [])
         if not feeds:
             logger.debug(f"Agent {agent_config.get('id')} has no feeds")
             return False
 
         # Check minimum items threshold
-        min_items = agent_config.get("trigger", {}).get("min_items", 1)
+        min_items: int = agent_config.get("trigger", {}).get("min_items", 1)
         if min_items <= 0:
             return True
 
         # Check if feeds have enough items
-        has_enough_items = self._has_feeds_with_items(feeds)
+        has_enough_items: bool = self._has_feeds_with_items(feeds)
         if not has_enough_items:
             logger.debug(f"Agent {agent_config.get('id')}: feeds don't have enough items")
             return False
@@ -90,12 +90,12 @@ class TriggerManager:
         Returns:
             True if agent was triggered
         """
-        agent_id = agent_config.get("id")
-        agent_name = agent_config.get("name")
+        agent_id: Optional[str] = agent_config.get("id")
+        agent_name: Optional[str] = agent_config.get("name")
 
         # Add to queue
         with self.lock:
-            queue_entry = {
+            queue_entry: Dict[str, Any] = {
                 "agent_id": agent_id,
                 "agent_name": agent_name,
                 "items": items,
@@ -115,17 +115,17 @@ class TriggerManager:
     def _has_feeds_with_items(self, feed_ids: List[str]) -> bool:
         """Check if any of the specified feeds have new items"""
         # Load feed state
-        state_file = self.data_dir / "feed_state.json"
+        state_file: Path = self.data_dir / "feed_state.json"
         if not state_file.exists():
             return False
 
         try:
             with open(state_file, "r") as f:
-                feed_state = json.load(f)
+                feed_state: Dict[str, Any] = json.load(f)
 
             # Check if any feed has items
             for feed_id in feed_ids:
-                if feed_id in feed_state and feed_state[feed_id]["has_new_items"]:
+                if feed_id in feed_state and feed_state[feed_id].get("has_new_items", False):
                     return True
 
             return False
@@ -134,7 +134,7 @@ class TriggerManager:
             logger.error(f"Failed to check feed state: {e}")
             return False
 
-    def get_next_task(self) -> Dict[str, Any]:
+    def get_next_task(self) -> Optional[Dict[str, Any]]:
         """
         Get the next task from the queue
 
@@ -145,7 +145,7 @@ class TriggerManager:
             if not self.queue:
                 return None
 
-            task = self.queue.pop(0)
+            task: Dict[str, Any] = self.queue.pop(0)
             self._save_queue()
 
             logger.info(f"Retrieved task: {task['agent_name']}")
@@ -159,14 +159,14 @@ class TriggerManager:
             "timestamp": datetime.utcnow().isoformat()
         }
 
-    def clear_queue(self):
+    def clear_queue(self) -> None:
         """Clear all items from queue"""
         with self.lock:
             self.queue = []
             self._save_queue()
             logger.info("Queue cleared")
 
-    def _load_queue(self):
+    def _load_queue(self) -> None:
         """Load queue from file"""
         if self.queue_file.exists():
             try:
@@ -180,7 +180,7 @@ class TriggerManager:
             logger.debug("No queue file found")
             self.queue = []
 
-    def _save_queue(self):
+    def _save_queue(self) -> None:
         """Save queue to file"""
         try:
             self.queue_file.parent.mkdir(parents=True, exist_ok=True)
