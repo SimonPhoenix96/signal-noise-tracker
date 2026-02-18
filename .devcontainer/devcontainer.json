@@ -1,0 +1,24 @@
+{
+  "name": "Cronjob Money MVP",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black",
+        "ms-python.pytest",
+        "github.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt && pip install -e .",
+  "portsAttributes": {
+    "8000": {
+      "label": "App",
+      "visibility": "public"
+    }
+  }
+}
