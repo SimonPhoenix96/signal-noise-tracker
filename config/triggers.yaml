@@ -1,0 +1,93 @@
+# Agent Trigger Rules Configuration
+# Define how RSS entries should trigger specific agents
+
+triggers:
+  arbitrage:
+    enabled: true
+    sources: ["kleinanzeigen", "ebay", "vinted", "facebook_marketplace"]
+    keyword_rules:
+      - keywords: ["iphone", "iphone 15", "iphone 14", "iphone 13"]
+        min_discount: 0.30  # 30% below market price
+        max_price: 1200
+        actions:
+          - type: alert
+            channel: discord
+          - type: log
+            level: info
+          - type: database
+            table: arbitrage_alerts
+      
+      - keywords: ["playstation", "ps5", "ps4", "playstation 5"]
+        min_discount: 0.25
+        max_price: 800
+        actions:
+          - type: alert
+            channel: discord
+          - type: log
+            level: info
+          - type: database
+            table: arbitrage_alerts
+      
+      - keywords: ["dji", "drones", "dji mini", "dji air"]
+        min_discount: 0.35
+        max_price: 1500
+        actions:
+          - type: alert
+            channel: discord
+          - type: log
+            level: info
+          - type: database
+            table: arbitrage_alerts
+    
+    exclusion_rules:
+      - keywords: ["fake", "replica", "clone", "used but"]
+        actions:
+          - type: block
+
+  intel:
+    enabled: true
+    sources: ["producthunt", "twitter", "hackernews", "github"]
+    keyword_rules:
+      - keywords: ["saas", "software", "platform", "ai"]
+        match_on: ["title", "description", "tags"]
+        actions:
+          - type: scrape
+            target: producthunt
+            limit: 10
+          - type: log
+            level: info
+          - type: database
+            table: competitive_intel
+
+  hiring:
+    enabled: true
+    sources: ["linkedin", "indeed", "remoteok"]
+    keyword_rules:
+      - keywords: ["rust", "go", "python", "devops", "kubernetes", "web"]
+        match_on: ["title", "description"]
+        actions:
+          - type: log
+            level: info
+          - type: database
+            table: job_alerts
+          - type: notify
+            method: alert
+
+  trend_scanner:
+    enabled: true
+    sources: ["etsy", "depop", "amazon"]
+    keyword_rules:
+      - keywords: ["wholesale", "bulk", "supplier", "dropship"]
+        match_on: ["title"]
+        actions:
+          - type: alert
+            channel: discord
+          - type: log
+            level: info
+          - type: database
+            table: trend_alerts
+
+general_settings:
+  min_confidence: 0.7  # Minimum keyword match score
+  max_duplicates: 5    # Maximum duplicates per item per source
+  dedup_window_hours: 24  # Time window for deduplication

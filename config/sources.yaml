@@ -1,0 +1,84 @@
+# RSS Feed Sources Configuration
+# Priority: Lower number = higher priority (1 = most important)
+# Max items: Maximum entries to fetch per source per run
+
+sources:
+  lukesmith_blog:
+    url: "https://lukesmith.xyz/rss.xml"
+    priority: 1
+    max_items: 20
+    rate_limit: 3600  # 1 hour
+    enabled: true
+    tags: ["tech", "linux", "minimalism"]
+
+  lukesmith_videos:
+    url: "https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2"
+    priority: 2
+    max_items: 10
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "videos", "minimalism"]
+
+  lukesmith_youtube:
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA"
+    priority: 3
+    max_items: 10
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "youtube", "videos"]
+
+  lindypress:
+    url: "https://lindypress.net/rss"
+    priority: 4
+    max_items: 20
+    rate_limit: 3600
+    enabled: true
+    tags: ["news", "politics"]
+
+  notrelated:
+    url: "https://notrelated.xyz/rss"
+    priority: 5
+    max_items: 20
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "gaming"]
+
+  landchad:
+    url: "https://landchad.net/rss.xml"
+    priority: 6
+    max_items: 15
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "linux", "webdev"]
+
+  based_cooking:
+    url: "https://based.cooking/index.xml"
+    priority: 7
+    max_items: 15
+    rate_limit: 3600
+    enabled: true
+    tags: ["food", "cooking"]
+
+  artix_linux:
+    url: "https://artixlinux.org/feed.php"
+    priority: 8
+    max_items: 20
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "linux", "artix"]
+
+  arch_linux:
+    url: "https://www.archlinux.org/feeds/news/"
+    priority: 9
+    max_items: 20
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "linux", "arch"]
+
+  voidrice:
+    url: "https://github.com/LukeSmithxyz/voidrice/commits/master.atom"
+    priority: 10
+    max_items: 10
+    rate_limit: 3600
+    enabled: true
+    tags: ["tech", "dotfiles", "github"]

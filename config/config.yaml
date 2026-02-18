@@ -1,0 +1,45 @@
+# System Configuration
+system:
+  version: "1.0.0"
+  environment: "development"  # development, staging, production
+  timezone: "Europe/Berlin"
+  
+  scheduler:
+    interval_hours: 4
+    interval_minutes: 0
+    start_time: "09:00"
+    end_time: "23:00"
+    dry_run: false
+  
+  database:
+    type: "sqlite"
+    path: "data/cronjob.db"
+    backup_enabled: true
+    backup_interval_hours: 6
+  
+  logging:
+    level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+    format: "json"  # json, text
+    file_path: "logs/app.log"
+    max_size_mb: 100
+    retention_days: 30
+  
+  monitoring:
+    web_dashboard: true
+    health_check_interval: 60
+    alert_thresholds:
+      rss_fetch_failures: 3
+      agent_failures: 5
+      database_errors: 10
+  
+  error_handling:
+    max_retries: 3
+    retry_delay_seconds: 30
+    timeout_seconds: 30
+    raise_exceptions: false  # Set to true for debugging
+  
+  security:
+    api_keys:
+      discord: ""  # Add Discord bot token here
+      twitter: ""  # Add Twitter API keys here
+      github: ""   # Add GitHub tokens here

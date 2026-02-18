@@ -1,0 +1,19 @@
+# Cronjob Money-MVP Dependencies
+
+# RSS/Atom parsing
+feedparser>=6.0.10
+
+# YAML configuration
+pyyaml>=6.0.1
+
+# HTTP requests
+requests>=2.31.0
+
+# Scheduling (optional, for continuous scheduler)
+schedule>=1.2.0
+
+# Web dashboard (optional, for OpenClaw Office)
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+websockets>=11.0

@@ -1,0 +1,541 @@
+2026-02-18 07:53:22,482 - __main__ - ERROR - Failed to initialize database: 'CronjobDB' object has no attribute 'init_database'
+2026-02-18 07:53:59,273 - __main__ - INFO - Database initialized successfully
+2026-02-18 07:53:59,273 - __main__ - INFO - Running once (dry-run mode)
+2026-02-18 07:53:59,273 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 07:53:59.273466 ===
+2026-02-18 07:53:59,273 - core.scheduler - INFO - Current time outside scheduled window, skipping
+2026-02-18 07:54:15,114 - __main__ - INFO - Database initialized successfully
+2026-02-18 07:54:15,114 - __main__ - INFO - Running once (dry-run mode)
+2026-02-18 07:54:15,114 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 07:54:15.114906 ===
+2026-02-18 07:54:15,114 - core.scheduler - INFO - DRY RUN MODE - No actual actions performed
+2026-02-18 07:54:15,115 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 07:54:15,115 - core.rss_parser - INFO - Fetching feed: kleinanzeigen - https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 07:54:45,277 - core.rss_parser - ERROR - Failed to fetch kleinanzeigen: 404 Client Error: Not Found for url: https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 07:54:45,277 - core.rss_parser - INFO - Fetching feed: ebay - https://www.ebay.com/rss/search?q=flipping+items+cheap&sort=price_asc
+2026-02-18 07:55:15,752 - core.rss_parser - INFO - Fetched 0 entries from ebay
+2026-02-18 07:55:15,752 - core.rss_parser - INFO - Fetching feed: vinted - https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 07:55:45,933 - core.rss_parser - ERROR - Failed to fetch vinted: 404 Client Error: Not Found for url: https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 07:55:45,933 - core.rss_parser - INFO - Fetching feed: facebook_marketplace - https://www.facebook.com/search/top?q=flipping+items
+2026-02-18 09:07:11,454 - __main__ - INFO - Database initialized successfully
+2026-02-18 09:07:11,454 - __main__ - INFO - Running once (dry-run mode)
+2026-02-18 09:07:11,454 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 09:07:11.454946 ===
+2026-02-18 09:07:11,454 - core.scheduler - INFO - DRY RUN MODE - No actual actions performed
+2026-02-18 09:07:11,454 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 09:07:11,455 - core.rss_parser - INFO - Fetching feed: kleinanzeigen - https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 09:07:41,627 - core.rss_parser - ERROR - Failed to fetch kleinanzeigen: 404 Client Error: Not Found for url: https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 09:07:41,627 - core.rss_parser - INFO - Fetching feed: ebay - https://www.ebay.com/rss/search?q=flipping+items+cheap&sort=price_asc
+2026-02-18 09:08:12,159 - core.rss_parser - INFO - Fetched 0 entries from ebay
+2026-02-18 09:08:12,159 - core.rss_parser - INFO - Fetching feed: vinted - https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 09:08:42,320 - core.rss_parser - ERROR - Failed to fetch vinted: 404 Client Error: Not Found for url: https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 09:08:42,320 - core.rss_parser - INFO - Fetching feed: facebook_marketplace - https://www.facebook.com/search/top?q=flipping+items
+2026-02-18 09:09:12,727 - core.rss_parser - ERROR - Failed to fetch facebook_marketplace: 404 Client Error: Not Found for url: https://www.facebook.com/search/top?q=flipping+items
+2026-02-18 09:09:12,753 - core.rss_parser - INFO - Fetching feed: local_classifieds - https://www.ebay-kleinanzeigen.de/rss/p/berlin
+2026-02-18 09:09:43,047 - core.rss_parser - ERROR - Failed to fetch local_classifieds: 404 Client Error: Not Found for url: https://www.kleinanzeigen.de/rss/p/berlin?utm_source=ekde
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Processing source: kleinanzeigen (0 entries)
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source kleinanzeigen: 0 new entries
+2026-02-18 09:09:43,048 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source kleinanzeigen: 0 triggers matched
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Processing source: ebay (0 entries)
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source ebay: 0 new entries
+2026-02-18 09:09:43,048 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source ebay: 0 triggers matched
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Processing source: vinted (0 entries)
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source vinted: 0 new entries
+2026-02-18 09:09:43,048 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source vinted: 0 triggers matched
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Processing source: facebook_marketplace (0 entries)
+2026-02-18 09:09:43,048 - core.scheduler - INFO - Source facebook_marketplace: 0 new entries
+2026-02-18 09:09:43,048 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:09:43,049 - core.scheduler - INFO - Source facebook_marketplace: 0 triggers matched
+2026-02-18 09:09:43,049 - core.scheduler - INFO - Processing source: local_classifieds (0 entries)
+2026-02-18 09:09:43,049 - core.scheduler - INFO - Source local_classifieds: 0 new entries
+2026-02-18 09:09:43,049 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:09:43,049 - core.scheduler - INFO - Source local_classifieds: 0 triggers matched
+2026-02-18 09:09:43,050 - core.scheduler - ERROR - CRON JOB FAILED: name 'json' is not defined
+Traceback (most recent call last):
+  File "/home/jd/Cronjob_Money_MVP/core/scheduler.py", line 113, in _run_job
+    logger.info(f"Database stats: {json.dumps(stats, indent=2)}")
+                                   ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-02-18 09:12:12,179 - __main__ - INFO - Database initialized successfully
+2026-02-18 09:12:12,180 - __main__ - INFO - Starting continuous scheduler
+2026-02-18 09:12:12,180 - core.scheduler - INFO - Starting Cronjob Money-MVP scheduler...
+2026-02-18 09:12:12,180 - core.scheduler - INFO - Scheduler running (interval: 4 hours)
+2026-02-18 09:12:12,180 - core.scheduler - INFO - Schedule window: 09:00 - 23:00
+2026-02-18 09:12:12,180 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 09:12:12.180315 ===
+2026-02-18 09:12:12,180 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 09:12:12,180 - core.rss_parser - INFO - Fetching feed: kleinanzeigen - https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 09:12:42,361 - core.rss_parser - ERROR - Failed to fetch kleinanzeigen: 404 Client Error: Not Found for url: https://www.kleinanzeigen.de/s-feed/rss?rgn=berlin
+2026-02-18 09:12:42,362 - core.rss_parser - INFO - Fetching feed: ebay - https://www.ebay.com/rss/search?q=flipping+items+cheap&sort=price_asc
+2026-02-18 09:13:12,903 - core.rss_parser - INFO - Fetched 0 entries from ebay
+2026-02-18 09:13:12,903 - core.rss_parser - INFO - Fetching feed: vinted - https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 09:13:43,085 - core.rss_parser - ERROR - Failed to fetch vinted: 404 Client Error: Not Found for url: https://www.vinted.com/api/v1/search?search_text=flipping+cheap&currency=EUR
+2026-02-18 09:13:43,085 - core.rss_parser - INFO - Fetching feed: facebook_marketplace - https://www.facebook.com/search/top?q=flipping+items
+2026-02-18 09:14:13,472 - core.rss_parser - ERROR - Failed to fetch facebook_marketplace: 404 Client Error: Not Found for url: https://www.facebook.com/search/top?q=flipping+items
+2026-02-18 09:14:13,473 - core.rss_parser - INFO - Fetching feed: local_classifieds - https://www.ebay-kleinanzeigen.de/rss/p/berlin
+2026-02-18 09:14:43,720 - core.rss_parser - ERROR - Failed to fetch local_classifieds: 404 Client Error: Not Found for url: https://www.kleinanzeigen.de/rss/p/berlin?utm_source=ekde
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Processing source: kleinanzeigen (0 entries)
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Source kleinanzeigen: 0 new entries
+2026-02-18 09:14:43,720 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Source kleinanzeigen: 0 triggers matched
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Processing source: ebay (0 entries)
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Source ebay: 0 new entries
+2026-02-18 09:14:43,720 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Source ebay: 0 triggers matched
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Processing source: vinted (0 entries)
+2026-02-18 09:14:43,720 - core.scheduler - INFO - Source vinted: 0 new entries
+2026-02-18 09:14:43,720 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Source vinted: 0 triggers matched
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Processing source: facebook_marketplace (0 entries)
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Source facebook_marketplace: 0 new entries
+2026-02-18 09:14:43,721 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Source facebook_marketplace: 0 triggers matched
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Processing source: local_classifieds (0 entries)
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Source local_classifieds: 0 new entries
+2026-02-18 09:14:43,721 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:14:43,721 - core.scheduler - INFO - Source local_classifieds: 0 triggers matched
+2026-02-18 09:14:43,722 - core.scheduler - ERROR - CRON JOB FAILED: name 'json' is not defined
+Traceback (most recent call last):
+  File "/app/core/scheduler.py", line 113, in _run_job
+    logger.info(f"Database stats: {json.dumps(stats, indent=2)}")
+                                   ^^^^
+NameError: name 'json' is not defined
+2026-02-18 09:15:17,374 - core.scheduler - INFO - Received signal 15, shutting down...
+2026-02-18 09:15:18,352 - __main__ - INFO - Database initialized successfully
+2026-02-18 09:15:18,352 - __main__ - INFO - Starting continuous scheduler
+2026-02-18 09:15:18,352 - core.scheduler - INFO - Starting Cronjob Money-MVP scheduler...
+2026-02-18 09:15:18,352 - core.scheduler - INFO - Scheduler running (interval: 4 hours)
+2026-02-18 09:15:18,352 - core.scheduler - INFO - Schedule window: 09:00 - 23:00
+2026-02-18 09:15:18,352 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 09:15:18.352630 ===
+2026-02-18 09:15:18,352 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 09:15:18,352 - core.rss_parser - INFO - Fetching feed: lukesmith_blog - https://lukesmith.xyz/rss.xml
+2026-02-18 09:15:50,858 - core.rss_parser - INFO - Fetched 20 entries from lukesmith_blog
+2026-02-18 09:15:50,858 - core.rss_parser - INFO - Fetching feed: lukesmith_videos - https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2
+2026-02-18 09:16:22,792 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_videos
+2026-02-18 09:16:22,792 - core.rss_parser - INFO - Fetching feed: lukesmith_youtube - https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA
+2026-02-18 09:16:52,979 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_youtube
+2026-02-18 09:16:52,979 - core.rss_parser - INFO - Fetching feed: lindypress - https://lindypress.net/rss
+2026-02-18 09:17:24,811 - core.rss_parser - INFO - Fetched 11 entries from lindypress
+2026-02-18 09:17:24,812 - core.rss_parser - INFO - Fetching feed: notrelated - https://notrelated.xyz/rss
+2026-02-18 09:17:56,283 - core.rss_parser - INFO - Fetched 17 entries from notrelated
+2026-02-18 09:17:56,283 - core.rss_parser - INFO - Fetching feed: landchad - https://landchad.net/rss.xml
+2026-02-18 09:18:28,952 - core.rss_parser - INFO - Fetched 15 entries from landchad
+2026-02-18 09:18:28,952 - core.rss_parser - INFO - Fetching feed: based_cooking - https://based.cooking/index.xml
+2026-02-18 09:19:01,221 - core.rss_parser - INFO - Fetched 15 entries from based_cooking
+2026-02-18 09:19:01,221 - core.rss_parser - INFO - Fetching feed: artix_linux - https://artixlinux.org/feed.php
+2026-02-18 09:19:31,581 - core.rss_parser - INFO - Fetched 10 entries from artix_linux
+2026-02-18 09:19:31,581 - core.rss_parser - INFO - Fetching feed: arch_linux - https://www.archlinux.org/feeds/news/
+2026-02-18 09:20:02,072 - core.rss_parser - INFO - Fetched 10 entries from arch_linux
+2026-02-18 09:20:02,072 - core.rss_parser - INFO - Fetching feed: voidrice - https://github.com/LukeSmithxyz/voidrice/commits/master.atom
+2026-02-18 09:20:32,548 - core.rss_parser - INFO - Fetched 10 entries from voidrice
+2026-02-18 09:20:32,548 - core.scheduler - INFO - Processing source: lukesmith_blog (20 entries)
+2026-02-18 09:20:32,548 - core.rss_parser - INFO - Deduplicating 20 entries for source lukesmith_blog
+2026-02-18 09:20:32,639 - core.rss_parser - INFO - Kept 20 new entries after deduplication
+2026-02-18 09:20:32,640 - core.scheduler - INFO - Source lukesmith_blog: 20 new entries
+2026-02-18 09:20:32,643 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,643 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,644 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,645 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,645 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,645 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,646 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,646 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,647 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,647 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,648 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,648 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,649 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,649 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,649 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,650 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,650 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,650 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,651 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,651 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,652 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,652 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,652 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,652 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,653 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,653 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,653 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,653 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,654 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,654 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,655 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,655 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,656 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,656 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,656 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,657 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,658 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,658 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,658 - core.agent_trigger - INFO - Matched 20 entries against 4 triggers
+2026-02-18 09:20:32,658 - core.scheduler - INFO - Source lukesmith_blog: 20 triggers matched
+2026-02-18 09:20:32,658 - core.scheduler - INFO - Processing source: lukesmith_videos (10 entries)
+2026-02-18 09:20:32,658 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_videos
+2026-02-18 09:20:32,680 - core.rss_parser - INFO - Kept 10 new entries after deduplication
+2026-02-18 09:20:32,680 - core.scheduler - INFO - Source lukesmith_videos: 10 new entries
+2026-02-18 09:20:32,714 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,715 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,715 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,715 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,716 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,716 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,716 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,716 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,717 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,717 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,718 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,718 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,718 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,718 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,719 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,719 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,719 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,719 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,720 - core.agent_trigger - INFO - Matched 10 entries against 4 triggers
+2026-02-18 09:20:32,720 - core.scheduler - INFO - Source lukesmith_videos: 10 triggers matched
+2026-02-18 09:20:32,720 - core.scheduler - INFO - Processing source: lukesmith_youtube (10 entries)
+2026-02-18 09:20:32,720 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_youtube
+2026-02-18 09:20:32,764 - core.rss_parser - INFO - Kept 10 new entries after deduplication
+2026-02-18 09:20:32,764 - core.scheduler - INFO - Source lukesmith_youtube: 10 new entries
+2026-02-18 09:20:32,770 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,770 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,770 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,770 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,771 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,771 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,772 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,772 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,772 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,772 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,773 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,773 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,773 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,773 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,774 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,774 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,775 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,775 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,775 - core.agent_trigger - INFO - Matched 10 entries against 4 triggers
+2026-02-18 09:20:32,775 - core.scheduler - INFO - Source lukesmith_youtube: 10 triggers matched
+2026-02-18 09:20:32,775 - core.scheduler - INFO - Processing source: lindypress (11 entries)
+2026-02-18 09:20:32,775 - core.rss_parser - INFO - Deduplicating 11 entries for source lindypress
+2026-02-18 09:20:32,817 - core.rss_parser - INFO - Kept 11 new entries after deduplication
+2026-02-18 09:20:32,817 - core.scheduler - INFO - Source lindypress: 11 new entries
+2026-02-18 09:20:32,822 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,822 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,822 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,822 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,823 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,823 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,824 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,824 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,824 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,824 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,825 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,825 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,826 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,826 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,826 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,826 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,827 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,827 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,827 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,827 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,828 - core.agent_trigger - INFO - Matched 11 entries against 4 triggers
+2026-02-18 09:20:32,828 - core.scheduler - INFO - Source lindypress: 11 triggers matched
+2026-02-18 09:20:32,828 - core.scheduler - INFO - Processing source: notrelated (17 entries)
+2026-02-18 09:20:32,828 - core.rss_parser - INFO - Deduplicating 17 entries for source notrelated
+2026-02-18 09:20:32,893 - core.rss_parser - INFO - Kept 17 new entries after deduplication
+2026-02-18 09:20:32,893 - core.scheduler - INFO - Source notrelated: 17 new entries
+2026-02-18 09:20:32,898 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,898 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,899 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,899 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,900 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,900 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,900 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,900 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,901 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,901 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,902 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,902 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,903 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,903 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,904 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,904 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,904 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,904 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,905 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,905 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,905 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,906 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,906 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,906 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,907 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,907 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,908 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,908 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,908 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,908 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,909 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,909 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,909 - core.agent_trigger - INFO - Matched 17 entries against 4 triggers
+2026-02-18 09:20:32,909 - core.scheduler - INFO - Source notrelated: 17 triggers matched
+2026-02-18 09:20:32,909 - core.scheduler - INFO - Processing source: landchad (15 entries)
+2026-02-18 09:20:32,909 - core.rss_parser - INFO - Deduplicating 15 entries for source landchad
+2026-02-18 09:20:32,962 - core.rss_parser - INFO - Kept 15 new entries after deduplication
+2026-02-18 09:20:32,962 - core.scheduler - INFO - Source landchad: 15 new entries
+2026-02-18 09:20:32,967 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,967 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,968 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,968 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,968 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,968 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,969 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,969 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,969 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,969 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,970 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,970 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,970 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,971 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,971 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,971 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,971 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,971 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,972 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,972 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,972 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,972 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,973 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,973 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,974 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,974 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,974 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,975 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:32,975 - core.agent_trigger - INFO - Matched 15 entries against 4 triggers
+2026-02-18 09:20:32,975 - core.scheduler - INFO - Source landchad: 15 triggers matched
+2026-02-18 09:20:32,975 - core.scheduler - INFO - Processing source: based_cooking (15 entries)
+2026-02-18 09:20:32,975 - core.rss_parser - INFO - Deduplicating 15 entries for source based_cooking
+2026-02-18 09:20:33,031 - core.rss_parser - INFO - Kept 15 new entries after deduplication
+2026-02-18 09:20:33,031 - core.scheduler - INFO - Source based_cooking: 15 new entries
+2026-02-18 09:20:33,039 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,039 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,040 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,040 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,041 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,041 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,042 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,042 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,043 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,043 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,044 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,044 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,044 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,044 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,045 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,045 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,046 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,046 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,046 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,046 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,047 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,047 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,048 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,048 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,048 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,048 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,049 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,049 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,049 - core.agent_trigger - INFO - Matched 15 entries against 4 triggers
+2026-02-18 09:20:33,049 - core.scheduler - INFO - Source based_cooking: 15 triggers matched
+2026-02-18 09:20:33,049 - core.scheduler - INFO - Processing source: artix_linux (10 entries)
+2026-02-18 09:20:33,049 - core.rss_parser - INFO - Deduplicating 10 entries for source artix_linux
+2026-02-18 09:20:33,097 - core.rss_parser - INFO - Kept 10 new entries after deduplication
+2026-02-18 09:20:33,097 - core.scheduler - INFO - Source artix_linux: 10 new entries
+2026-02-18 09:20:33,104 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,104 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,105 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,105 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,106 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,106 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,107 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,108 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,108 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,108 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,109 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,109 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,110 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,110 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,111 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,111 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,111 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,111 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,112 - core.agent_trigger - INFO - Matched 10 entries against 4 triggers
+2026-02-18 09:20:33,112 - core.scheduler - INFO - Source artix_linux: 10 triggers matched
+2026-02-18 09:20:33,112 - core.scheduler - INFO - Processing source: arch_linux (10 entries)
+2026-02-18 09:20:33,112 - core.rss_parser - INFO - Deduplicating 10 entries for source arch_linux
+2026-02-18 09:20:33,155 - core.rss_parser - INFO - Kept 10 new entries after deduplication
+2026-02-18 09:20:33,155 - core.scheduler - INFO - Source arch_linux: 10 new entries
+2026-02-18 09:20:33,160 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,160 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,161 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,161 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,162 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,162 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,163 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,163 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,163 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,163 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,164 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,164 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,165 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,165 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,165 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,165 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,166 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,166 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,166 - core.agent_trigger - INFO - Matched 10 entries against 4 triggers
+2026-02-18 09:20:33,166 - core.scheduler - INFO - Source arch_linux: 10 triggers matched
+2026-02-18 09:20:33,166 - core.scheduler - INFO - Processing source: voidrice (10 entries)
+2026-02-18 09:20:33,166 - core.rss_parser - INFO - Deduplicating 10 entries for source voidrice
+2026-02-18 09:20:33,207 - core.rss_parser - INFO - Kept 10 new entries after deduplication
+2026-02-18 09:20:33,207 - core.scheduler - INFO - Source voidrice: 10 new entries
+2026-02-18 09:20:33,211 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,212 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,212 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,213 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,213 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,213 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,214 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,214 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,215 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,215 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,216 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,216 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,216 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,216 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,217 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,217 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,217 - core.db - ERROR - Database error: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,218 - core.db - ERROR - Failed to insert trigger: UNIQUE constraint failed: agent_triggers.trigger_name, agent_triggers.source, agent_triggers.triggered_at
+2026-02-18 09:20:33,218 - core.agent_trigger - INFO - Matched 10 entries against 4 triggers
+2026-02-18 09:20:33,218 - core.scheduler - INFO - Source voidrice: 10 triggers matched
+2026-02-18 09:20:33,218 - core.scheduler - ERROR - CRON JOB FAILED: name 'json' is not defined
+Traceback (most recent call last):
+  File "/app/core/scheduler.py", line 113, in _run_job
+    logger.info(f"Database stats: {json.dumps(stats, indent=2)}")
+                                   ^^^^
+NameError: name 'json' is not defined
+2026-02-18 09:20:51,988 - core.scheduler - INFO - Received signal 15, shutting down...
+2026-02-18 09:20:52,887 - __main__ - INFO - Database initialized successfully
+2026-02-18 09:20:52,887 - __main__ - INFO - Starting continuous scheduler
+2026-02-18 09:20:52,887 - core.scheduler - INFO - Starting Cronjob Money-MVP scheduler...
+2026-02-18 09:20:52,887 - core.scheduler - INFO - Scheduler running (interval: 4 hours)
+2026-02-18 09:20:52,887 - core.scheduler - INFO - Schedule window: 09:00 - 23:00
+2026-02-18 09:20:52,887 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 09:20:52.887766 ===
+2026-02-18 09:20:52,887 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 09:20:52,887 - core.rss_parser - INFO - Fetching feed: lukesmith_blog - https://lukesmith.xyz/rss.xml
+2026-02-18 09:21:25,165 - core.rss_parser - INFO - Fetched 20 entries from lukesmith_blog
+2026-02-18 09:21:25,166 - core.rss_parser - INFO - Fetching feed: lukesmith_videos - https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2
+2026-02-18 09:21:57,429 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_videos
+2026-02-18 09:21:57,429 - core.rss_parser - INFO - Fetching feed: lukesmith_youtube - https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA
+2026-02-18 09:22:27,622 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_youtube
+2026-02-18 09:22:27,622 - core.rss_parser - INFO - Fetching feed: lindypress - https://lindypress.net/rss
+2026-02-18 09:22:59,244 - core.rss_parser - INFO - Fetched 11 entries from lindypress
+2026-02-18 09:22:59,244 - core.rss_parser - INFO - Fetching feed: notrelated - https://notrelated.xyz/rss
+2026-02-18 09:23:30,920 - core.rss_parser - INFO - Fetched 17 entries from notrelated
+2026-02-18 09:23:30,921 - core.rss_parser - INFO - Fetching feed: landchad - https://landchad.net/rss.xml
+2026-02-18 09:24:03,686 - core.rss_parser - INFO - Fetched 15 entries from landchad
+2026-02-18 09:24:03,686 - core.rss_parser - INFO - Fetching feed: based_cooking - https://based.cooking/index.xml
+2026-02-18 09:24:36,303 - core.rss_parser - INFO - Fetched 15 entries from based_cooking
+2026-02-18 09:24:36,303 - core.rss_parser - INFO - Fetching feed: artix_linux - https://artixlinux.org/feed.php
+2026-02-18 09:25:06,620 - core.rss_parser - INFO - Fetched 10 entries from artix_linux
+2026-02-18 09:25:06,620 - core.rss_parser - INFO - Fetching feed: arch_linux - https://www.archlinux.org/feeds/news/
+2026-02-18 09:25:37,097 - core.rss_parser - INFO - Fetched 10 entries from arch_linux
+2026-02-18 09:25:37,097 - core.rss_parser - INFO - Fetching feed: voidrice - https://github.com/LukeSmithxyz/voidrice/commits/master.atom
+2026-02-18 09:26:07,490 - core.rss_parser - INFO - Fetched 10 entries from voidrice
+2026-02-18 09:26:07,490 - core.scheduler - INFO - Processing source: lukesmith_blog (20 entries)
+2026-02-18 09:26:07,490 - core.rss_parser - INFO - Deduplicating 20 entries for source lukesmith_blog
+2026-02-18 09:26:07,493 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,493 - core.scheduler - INFO - Source lukesmith_blog: 0 new entries
+2026-02-18 09:26:07,493 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,493 - core.scheduler - INFO - Source lukesmith_blog: 0 triggers matched
+2026-02-18 09:26:07,493 - core.scheduler - INFO - Processing source: lukesmith_videos (10 entries)
+2026-02-18 09:26:07,493 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_videos
+2026-02-18 09:26:07,495 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,495 - core.scheduler - INFO - Source lukesmith_videos: 0 new entries
+2026-02-18 09:26:07,495 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,495 - core.scheduler - INFO - Source lukesmith_videos: 0 triggers matched
+2026-02-18 09:26:07,495 - core.scheduler - INFO - Processing source: lukesmith_youtube (10 entries)
+2026-02-18 09:26:07,495 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_youtube
+2026-02-18 09:26:07,496 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,496 - core.scheduler - INFO - Source lukesmith_youtube: 0 new entries
+2026-02-18 09:26:07,496 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,496 - core.scheduler - INFO - Source lukesmith_youtube: 0 triggers matched
+2026-02-18 09:26:07,496 - core.scheduler - INFO - Processing source: lindypress (11 entries)
+2026-02-18 09:26:07,496 - core.rss_parser - INFO - Deduplicating 11 entries for source lindypress
+2026-02-18 09:26:07,498 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,498 - core.scheduler - INFO - Source lindypress: 0 new entries
+2026-02-18 09:26:07,498 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,498 - core.scheduler - INFO - Source lindypress: 0 triggers matched
+2026-02-18 09:26:07,498 - core.scheduler - INFO - Processing source: notrelated (17 entries)
+2026-02-18 09:26:07,498 - core.rss_parser - INFO - Deduplicating 17 entries for source notrelated
+2026-02-18 09:26:07,500 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,500 - core.scheduler - INFO - Source notrelated: 0 new entries
+2026-02-18 09:26:07,500 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,500 - core.scheduler - INFO - Source notrelated: 0 triggers matched
+2026-02-18 09:26:07,500 - core.scheduler - INFO - Processing source: landchad (15 entries)
+2026-02-18 09:26:07,501 - core.rss_parser - INFO - Deduplicating 15 entries for source landchad
+2026-02-18 09:26:07,503 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,503 - core.scheduler - INFO - Source landchad: 0 new entries
+2026-02-18 09:26:07,503 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,503 - core.scheduler - INFO - Source landchad: 0 triggers matched
+2026-02-18 09:26:07,503 - core.scheduler - INFO - Processing source: based_cooking (15 entries)
+2026-02-18 09:26:07,503 - core.rss_parser - INFO - Deduplicating 15 entries for source based_cooking
+2026-02-18 09:26:07,505 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,505 - core.scheduler - INFO - Source based_cooking: 0 new entries
+2026-02-18 09:26:07,505 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,505 - core.scheduler - INFO - Source based_cooking: 0 triggers matched
+2026-02-18 09:26:07,505 - core.scheduler - INFO - Processing source: artix_linux (10 entries)
+2026-02-18 09:26:07,505 - core.rss_parser - INFO - Deduplicating 10 entries for source artix_linux
+2026-02-18 09:26:07,506 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,507 - core.scheduler - INFO - Source artix_linux: 0 new entries
+2026-02-18 09:26:07,507 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,507 - core.scheduler - INFO - Source artix_linux: 0 triggers matched
+2026-02-18 09:26:07,507 - core.scheduler - INFO - Processing source: arch_linux (10 entries)
+2026-02-18 09:26:07,507 - core.rss_parser - INFO - Deduplicating 10 entries for source arch_linux
+2026-02-18 09:26:07,508 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,508 - core.scheduler - INFO - Source arch_linux: 0 new entries
+2026-02-18 09:26:07,508 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,508 - core.scheduler - INFO - Source arch_linux: 0 triggers matched
+2026-02-18 09:26:07,508 - core.scheduler - INFO - Processing source: voidrice (10 entries)
+2026-02-18 09:26:07,508 - core.rss_parser - INFO - Deduplicating 10 entries for source voidrice
+2026-02-18 09:26:07,510 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 09:26:07,510 - core.scheduler - INFO - Source voidrice: 0 new entries
+2026-02-18 09:26:07,510 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 09:26:07,510 - core.scheduler - INFO - Source voidrice: 0 triggers matched
+2026-02-18 09:26:07,510 - core.scheduler - ERROR - CRON JOB FAILED: name 'json' is not defined
+Traceback (most recent call last):
+  File "/app/core/scheduler.py", line 113, in _run_job
+    logger.info(f"Database stats: {json.dumps(stats, indent=2)}")
+                                   ^^^^
+NameError: name 'json' is not defined
+2026-02-18 10:43:40,468 - __main__ - INFO - Database initialized successfully
+2026-02-18 10:43:40,468 - __main__ - INFO - Starting continuous scheduler
+2026-02-18 10:43:40,468 - core.scheduler - INFO - Starting Cronjob Money-MVP scheduler...
+2026-02-18 10:43:40,468 - core.scheduler - INFO - Scheduler running (interval: 4 hours)
+2026-02-18 10:43:40,469 - core.scheduler - INFO - Schedule window: 09:00 - 23:00
+2026-02-18 10:43:40,469 - core.scheduler - INFO - === CRON JOB START: 2026-02-18 10:43:40.469051 ===
+2026-02-18 10:43:40,469 - core.scheduler - INFO - Step 1: Fetching RSS feeds...
+2026-02-18 10:43:40,469 - core.rss_parser - INFO - Fetching feed: lukesmith_blog - https://lukesmith.xyz/rss.xml
+2026-02-18 10:44:12,919 - core.rss_parser - INFO - Fetched 20 entries from lukesmith_blog
+2026-02-18 10:44:12,919 - core.rss_parser - INFO - Fetching feed: lukesmith_videos - https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2
+2026-02-18 10:44:45,096 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_videos
+2026-02-18 10:44:45,096 - core.rss_parser - INFO - Fetching feed: lukesmith_youtube - https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA
+2026-02-18 10:45:15,336 - core.rss_parser - INFO - Fetched 10 entries from lukesmith_youtube
+2026-02-18 10:45:15,336 - core.rss_parser - INFO - Fetching feed: lindypress - https://lindypress.net/rss
+2026-02-18 10:45:47,253 - core.rss_parser - INFO - Fetched 11 entries from lindypress
+2026-02-18 10:45:47,253 - core.rss_parser - INFO - Fetching feed: notrelated - https://notrelated.xyz/rss
