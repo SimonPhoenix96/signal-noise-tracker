@@ -2,7 +2,7 @@
 
 **Priority**: HIGHEST ⭐ | **Status**: CORE INFRASTRUCTURE COMPLETE (70%) | **Deployment**: Ready for External Environment
 
-A modular, configurable cronjob system that ingests RSS feeds, matches entries against custom triggers, and triggers specific agents for money-making opportunities. This is the foundation system that powers all 11 MVP projects in your portfolio.
+A modular, configurable RSS feed monitoring system that ingests RSS feeds, matches entries against custom triggers, and triggers specific agents for opportunity detection. This is the foundation system that powers all 11 MVP projects in your portfolio.
 
 ---
 

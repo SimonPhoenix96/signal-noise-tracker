@@ -539,3 +539,85 @@ NameError: name 'json' is not defined
 2026-02-18 10:45:15,336 - core.rss_parser - INFO - Fetching feed: lindypress - https://lindypress.net/rss
 2026-02-18 10:45:47,253 - core.rss_parser - INFO - Fetched 11 entries from lindypress
 2026-02-18 10:45:47,253 - core.rss_parser - INFO - Fetching feed: notrelated - https://notrelated.xyz/rss
+2026-02-18 10:46:18,772 - core.rss_parser - INFO - Fetched 17 entries from notrelated
+2026-02-18 10:46:18,772 - core.rss_parser - INFO - Fetching feed: landchad - https://landchad.net/rss.xml
+2026-02-18 10:46:51,272 - core.rss_parser - INFO - Fetched 15 entries from landchad
+2026-02-18 10:46:51,272 - core.rss_parser - INFO - Fetching feed: based_cooking - https://based.cooking/index.xml
+2026-02-18 10:47:23,865 - core.rss_parser - INFO - Fetched 15 entries from based_cooking
+2026-02-18 10:47:23,866 - core.rss_parser - INFO - Fetching feed: artix_linux - https://artixlinux.org/feed.php
+2026-02-18 10:47:54,104 - core.rss_parser - INFO - Fetched 10 entries from artix_linux
+2026-02-18 10:47:54,104 - core.rss_parser - INFO - Fetching feed: arch_linux - https://www.archlinux.org/feeds/news/
+2026-02-18 10:48:24,584 - core.rss_parser - INFO - Fetched 10 entries from arch_linux
+2026-02-18 10:48:24,584 - core.rss_parser - INFO - Fetching feed: voidrice - https://github.com/LukeSmithxyz/voidrice/commits/master.atom
+2026-02-18 10:48:55,035 - core.rss_parser - INFO - Fetched 10 entries from voidrice
+2026-02-18 10:48:55,035 - core.scheduler - INFO - Processing source: lukesmith_blog (20 entries)
+2026-02-18 10:48:55,035 - core.rss_parser - INFO - Deduplicating 20 entries for source lukesmith_blog
+2026-02-18 10:48:55,038 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,038 - core.scheduler - INFO - Source lukesmith_blog: 0 new entries
+2026-02-18 10:48:55,038 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,038 - core.scheduler - INFO - Source lukesmith_blog: 0 triggers matched
+2026-02-18 10:48:55,038 - core.scheduler - INFO - Processing source: lukesmith_videos (10 entries)
+2026-02-18 10:48:55,038 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_videos
+2026-02-18 10:48:55,040 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,040 - core.scheduler - INFO - Source lukesmith_videos: 0 new entries
+2026-02-18 10:48:55,040 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,040 - core.scheduler - INFO - Source lukesmith_videos: 0 triggers matched
+2026-02-18 10:48:55,040 - core.scheduler - INFO - Processing source: lukesmith_youtube (10 entries)
+2026-02-18 10:48:55,040 - core.rss_parser - INFO - Deduplicating 10 entries for source lukesmith_youtube
+2026-02-18 10:48:55,041 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,041 - core.scheduler - INFO - Source lukesmith_youtube: 0 new entries
+2026-02-18 10:48:55,041 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,041 - core.scheduler - INFO - Source lukesmith_youtube: 0 triggers matched
+2026-02-18 10:48:55,042 - core.scheduler - INFO - Processing source: lindypress (11 entries)
+2026-02-18 10:48:55,042 - core.rss_parser - INFO - Deduplicating 11 entries for source lindypress
+2026-02-18 10:48:55,043 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,043 - core.scheduler - INFO - Source lindypress: 0 new entries
+2026-02-18 10:48:55,043 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,043 - core.scheduler - INFO - Source lindypress: 0 triggers matched
+2026-02-18 10:48:55,043 - core.scheduler - INFO - Processing source: notrelated (17 entries)
+2026-02-18 10:48:55,043 - core.rss_parser - INFO - Deduplicating 17 entries for source notrelated
+2026-02-18 10:48:55,046 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,046 - core.scheduler - INFO - Source notrelated: 0 new entries
+2026-02-18 10:48:55,046 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,046 - core.scheduler - INFO - Source notrelated: 0 triggers matched
+2026-02-18 10:48:55,046 - core.scheduler - INFO - Processing source: landchad (15 entries)
+2026-02-18 10:48:55,046 - core.rss_parser - INFO - Deduplicating 15 entries for source landchad
+2026-02-18 10:48:55,048 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,048 - core.scheduler - INFO - Source landchad: 0 new entries
+2026-02-18 10:48:55,048 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,048 - core.scheduler - INFO - Source landchad: 0 triggers matched
+2026-02-18 10:48:55,048 - core.scheduler - INFO - Processing source: based_cooking (15 entries)
+2026-02-18 10:48:55,048 - core.rss_parser - INFO - Deduplicating 15 entries for source based_cooking
+2026-02-18 10:48:55,050 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,050 - core.scheduler - INFO - Source based_cooking: 0 new entries
+2026-02-18 10:48:55,051 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,051 - core.scheduler - INFO - Source based_cooking: 0 triggers matched
+2026-02-18 10:48:55,051 - core.scheduler - INFO - Processing source: artix_linux (10 entries)
+2026-02-18 10:48:55,051 - core.rss_parser - INFO - Deduplicating 10 entries for source artix_linux
+2026-02-18 10:48:55,052 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,052 - core.scheduler - INFO - Source artix_linux: 0 new entries
+2026-02-18 10:48:55,052 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,052 - core.scheduler - INFO - Source artix_linux: 0 triggers matched
+2026-02-18 10:48:55,052 - core.scheduler - INFO - Processing source: arch_linux (10 entries)
+2026-02-18 10:48:55,052 - core.rss_parser - INFO - Deduplicating 10 entries for source arch_linux
+2026-02-18 10:48:55,054 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,054 - core.scheduler - INFO - Source arch_linux: 0 new entries
+2026-02-18 10:48:55,054 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,054 - core.scheduler - INFO - Source arch_linux: 0 triggers matched
+2026-02-18 10:48:55,054 - core.scheduler - INFO - Processing source: voidrice (10 entries)
+2026-02-18 10:48:55,054 - core.rss_parser - INFO - Deduplicating 10 entries for source voidrice
+2026-02-18 10:48:55,055 - core.rss_parser - INFO - Kept 0 new entries after deduplication
+2026-02-18 10:48:55,055 - core.scheduler - INFO - Source voidrice: 0 new entries
+2026-02-18 10:48:55,055 - core.agent_trigger - INFO - Matched 0 entries against 4 triggers
+2026-02-18 10:48:55,056 - core.scheduler - INFO - Source voidrice: 0 triggers matched
+2026-02-18 10:48:55,056 - core.scheduler - INFO - Database stats: {
+  "rss_entries": 128,
+  "agent_triggers": 20,
+  "agent_actions": 0,
+  "arbitrage_alerts": 0,
+  "competitive_intel": 0,
+  "job_alerts": 0,
+  "trend_alerts": 0,
+  "system_health": 4
+}
+2026-02-18 10:48:55,066 - core.scheduler - INFO - === CRON JOB COMPLETED SUCCESSFULLY ===
